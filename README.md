@@ -1,48 +1,90 @@
-# 🚲 Retail Business Performance & Sales Anomaly Analysis - BikeStores
+# 🚲 Retail Business Performance & Sales Anomaly Analysis (BikeStores)
 
-<img src="Excel Dashboard Image.png" alt="Bike Store Sales Dashboard" width="900">
+<img src="Excel Dashboard Image.png" alt="BikeStores Excel Dashboard" width="900">
 
-## Business Context
-BikeStores adalah jaringan ritel sepeda dengan tiga cabang utama di Amerika Serikat (New York, California, dan Texas). Meskipun perusahaan mencetak rekor pendapatan pada tahun 2017, terjadi anomali penurunan drastis pada pertengahan tahun 2018 yang mengancam stabilitas bisnis. 
+*Dashboard juga tersedia dalam versi Tableau — lihat file Tableau Dashboard.twb di repositori ini*
 
-Proyek ini bertujuan untuk mensimulasikan peran data analyst di perusahaan retail dengan tugas membedah data transaksi penjualan sepeda dari tahun 2016 hingga 2018 guna mengidentifikasi apa yang sebenarnya terjadi pada tahun 2018, mengevaluasi efisiensi tiap cabang, dan merumuskan strategi pemulihan berbasis data.
+## 📌 Business Context
 
-## Problem Statement & Objectives
-Fokus utama dari analisis ini adalah menjawab pertanyaan bisnis kritis berikut:
-1.  **Anomaly Detection:** Menginvestigasi penyebab anjloknya *revenue* pasca April 2018.
-2.  **Store & Employee Performance:** Menilai tingkat ketergantungan perusahaan terhadap cabang atau staf penjualan tertentu.
-3.  **Product Strategy:** Mengidentifikasi lini produk (kategori & merek) yang menjadi ujung tombak *cash flow* perusahaan.
+BikeStores adalah jaringan ritel sepeda dengan tiga cabang di Amerika Serikat: New York, California, dan Texas. Meskipun perusahaan mencetak rekor pendapatan pada tahun 2017, terjadi anomali penurunan drastis mulai pertengahan 2018 yang mengancam stabilitas bisnis secara keseluruhan.
 
-## Tools & Methodology
--   **Data Modeling:** SQL (Melakukan *Table Joins* pada 7 tabel relasional: *customers, orders, order_items, products, categories, stores, staffs* untuk membentuk satu dataset).
--   **Data Analysis & Visualization:** Microsoft Excel (Pivot Charts & Slicers) dan Tableau untuk membangun dashboard interaktif.
--   **Status Data:** Dataset publik yang sudah melalui proses standarisasi (Pre-cleaned).
+Project ini mensimulasikan peran Data Analyst di perusahaan ritel dengan tugas membedah data transaksi penjualan dari tahun 2016 hingga 2018 — mengidentifikasi apa yang sebenarnya terjadi di 2018, mengevaluasi efisiensi tiap cabang dan staf, serta merumuskan strategi pemulihan berbasis data.
 
-## Key Insights (Executive Summary)
+## 🎯 Pertanyaan Bisnis
 
-### 1. Anomali Q2 2018
-Tahun 2017 adalah tahun kejayaan toko dengan total *revenue* menyentuh nyaris $4 Juta. Pola penjualan bulanan di 2016 dan 2017 terlihat stabil. Namun di tahun 2018, terjadi lonjakan ekstrem di bulan April yang langsung diikuti oleh grafik yang drop ke angka _revenue_ yang cukup kecil di sisa tahun tersebut. *Insight*: Hal seperti ini bukanlah karna tren musiman. Penurunan sedrastis ini mengindikasikan adanya krisis suplai (kehabisan stok masif pasca April), masalah teknis pada perekaman data di sistem POS (*Point of Sales*), atau penutupan operasional.
+1. Apa penyebab anjloknya revenue secara drastis pasca April 2018?
+2. Seberapa besar ketergantungan perusahaan terhadap cabang atau staf penjualan tertentu?
+3. Lini produk mana (kategori dan merek) yang menjadi ujung tombak cash flow perusahaan?
 
-### 2. Ketergantungan pada Cabang New York (Baldwin Bikes)
-Kesehatan finansial perusahaan tidak merata. Cabang Baldwin Bikes (New York) memonopoli 68% dari total pendapatan keseluruhan perusahaan. Sementara itu, Rowlett Bikes (Texas) tertinggal jauh di angka 11%. Hal ini menempatkan perusahaan pada risiko tinggi jika pasar New York mengalami guncangan.
+## 💡 Key Findings (Executive Summary)
 
-### 3. Sales Representative
-Dari seluruh staf, dua *Sales Reps* (Marcelene Boyer dan Venita Daniel) menghasilkan performa yang tidak wajar positifnya, di mana masing-masing dari meerka mencetak hampir $3 Juta dalam *revenue*. Jika digabungkan, mereka berdua mendominasi hampir seluruh penjualan perusahaan, meninggalkan staf lain (seperti Kali Vargas) jauh di bawah standar ($516 Ribu).
+| Temuan | Detail |
+|---|---|
+| **Tahun terbaik** | 2017 dengan total revenue mendekati R$ 4 Juta |
+| **Anomali 2018** | Lonjakan ekstrem di April, langsung diikuti penurunan tajam hingga akhir tahun |
+| **Cabang paling dominan** | Baldwin Bikes (New York) menyumbang 68% dari total revenue perusahaan |
+| **Cabang paling tertinggal** | Rowlett Bikes (Texas) hanya berkontribusi 11% |
+| **Sales rep terbaik** | Marcelene Boyer & Venita Daniel, masing-masing mencetak hampir R$ 3 Juta |
+| **Kategori produk terlaris** | Mountain Bikes dengan kontribusi lebih dari R$ 3 Juta |
+| **Merek paling dominan** | Trek — 4 dari 5 produk dengan revenue tertinggi berasal dari merek ini |
 
-### 4. Mountain Bikes & Brand "Trek" Mendominasi Pasar
-Kategori *Mountain Bikes* merajai penjualan dengan kontribusi lebih dari $3 Juta. Secara spesifik, 4 dari 5 produk dengan *revenue* tertinggi dipegang oleh *brand* **Trek** (terutama seri Slash 8 27.5).
+> 🔑 **Insight utama:** Anomali April 2018 bukan pola musiman biasa. Penurunan sedrastis itu mengindikasikan salah satu dari tiga kemungkinan: kehabisan stok masif pasca lonjakan penjualan, kegagalan teknis sistem POS dalam merekam transaksi, atau pengurangan operasional cabang. Manajemen perlu audit internal sebelum bisa mengambil keputusan strategis.
 
-## Strategic Recommendations
+## 🛠️ Tech Stack & Metodologi
 
-* **Audit Operasional 2018:** Manajemen harus segera melakukan audit internal terkait anomali penjualan di Q3-Q4 2018. Apakah dikarenakan data transaksi yang gagal terekam? Atau apakah lonjakan April menghabiskan seluruh inventaris Gudang sehingga tidak ada barang yang bisa dijual di bulan Mei-Desember?
-* **Knowledge Sharing antar Cabang & Staf:** Lakukan bedah strategi terhadap taktik penjualan Marcelene Boyer dan Venita Daniel, lalu jadikan taktik tersebut sebagai SOP pelatihan standar untuk staf lain yang underperform.
-* **Optimalisasi Inventaris:** Kurangi porsi stok untuk kategori *Cyclocross Bicycles* (yang penjualannya paling rendah, hanya ~$799 Ribu) dan alihkan *budget* pengadaan barang ke *brand* Trek, khususnya lini *Mountain* dan *Road Bikes*.
-* **Strategi Pemasaran Geografis:** Terapkan kampanye pemasaran yang agresif di California dan Texas untuk mengurangi ketergantungan *revenue* pada wilayah New York.
+| Tahap | Tools | Yang Dilakukan |
+|---|---|---|
+| **Data Modeling** | SQL (MySQL) | Menggabungkan 7 tabel relasional menjadi satu dataset analisis siap pakai |
+| **Analisis & Dashboard v1** | Microsoft Excel | Pivot Table, Pivot Charts, dan Slicers untuk dashboard interaktif |
+| **Analisis & Dashboard v2** | Tableau | Dashboard versi kedua dengan tampilan visual yang lebih interaktif |
 
-## 📂 Repository Structure
--   `/datas`: Berisi file raw dataset dan query untuk membuat dataset di mysql.
--   `Query.sql`: Berisi skrip SQL untuk *relational table joining*.
--   `Excel Dashboard.xlsx`: File Excel dengan dashboard interaktif.
--   `Tableau Dashboard.twb` : File dashboard Bike Store dalam versi Tableau.
----
-*Disclaimer: Proyek ini menggunakan dataset publik "BikeStores" yang dianalisis secara mandiri untuk latihan simulasi bisnis Data Analysis & Business Intelligence.*
+**Status dataset:** Pre-cleaned — tidak memerlukan proses data cleaning karena dataset sudah terstandarisasi sebelum digunakan.
+
+**Alur kerja:** Raw Database (7 Tabel) → SQL JOIN → Dataset Gabungan → Excel & Tableau Dashboard
+
+## ⚙️ Proses Analisis
+
+### 1. Data Modeling (SQL)
+
+Dataset BikeStores tersimpan dalam 7 tabel terpisah yang saling berelasi. Sebuah query SQL ditulis untuk menggabungkan seluruh tabel tersebut menjadi satu flat dataset yang langsung bisa dianalisis di Excel maupun Tableau.
+
+Tabel yang digabungkan: sales_orders, sales_customers, sales_order_items, production_products, production_categories, sales_stores, dan sales_staffs.
+
+Hasil dari query ini adalah satu tabel dengan kolom: order_id, nama customer, kota, state, tanggal order, total unit terjual, revenue, nama produk, kategori, nama toko, dan nama sales rep.
+
+### 2. Analisis & Visualisasi (Excel dan Tableau)
+
+Dataset hasil JOIN diolah menggunakan Pivot Table di Excel untuk menjawab ketiga pertanyaan bisnis. Hasilnya disajikan dalam dua versi dashboard:
+
+- **Excel Dashboard:** Menggunakan Pivot Charts dan Slicers yang memungkinkan filter interaktif berdasarkan tahun, cabang, dan kategori produk.
+- **Tableau Dashboard:** Versi alternatif dengan visualisasi yang lebih fleksibel dan lebih mudah dibagikan secara online.
+
+## 📊 Rekomendasi Strategis
+
+**Audit Operasional 2018:** Manajemen perlu segera menginvestigasi anomali Q3-Q4 2018. Apakah lonjakan April menguras seluruh stok gudang sehingga tidak ada barang yang bisa dijual di bulan berikutnya? Atau terdapat kegagalan sistem pencatatan transaksi? Jawaban atas pertanyaan ini menentukan langkah pemulihan yang tepat.
+
+**Knowledge Sharing antar Staf:** Marcelene Boyer dan Venita Daniel menghasilkan revenue hampir dua kali lipat dari staf lainnya. Taktik dan pendekatan penjualan mereka perlu didokumentasikan dan dijadikan SOP pelatihan standar untuk staf yang underperform seperti Kali Vargas.
+
+**Optimalisasi Inventaris Produk:** Kurangi porsi stok untuk kategori Cyclocross Bicycles yang penjualannya paling rendah, lalu alihkan anggaran pengadaan ke lini Mountain dan Road Bikes dari merek Trek yang terbukti menjadi penggerak utama revenue.
+
+**Diversifikasi Pasar Geografis:** Ketergantungan 68% revenue pada satu cabang (New York) adalah risiko bisnis yang signifikan. Diperlukan kampanye pemasaran yang lebih agresif di California dan Texas untuk menyeimbangkan kontribusi revenue antar wilayah.
+
+## 📁 Struktur Repositori
+
+| File / Folder | Keterangan |
+|---|---|
+| Query.sql | Query SQL untuk menggabungkan 7 tabel relasional menjadi satu dataset |
+| Excel Dashboard.xlsx | File Excel dengan Pivot Table dan dashboard interaktif |
+| Excel Dashboard Image.png | Screenshot tampilan Excel dashboard |
+| Tableau Dashboard.twb | File Tableau workbook versi dashboard alternatif |
+| Tableau Dashboard Image.png | Screenshot tampilan Tableau dashboard |
+| datas/ | Folder berisi raw dataset dan script SQL untuk setup database dari awal |
+
+## 📚 Apa yang Saya Pelajari
+
+- Cara membangun satu dataset analisis yang utuh dari beberapa tabel relasional menggunakan multi-table JOIN dalam satu query
+- Penggunaan CONCAT dan GROUP BY untuk merapikan output query agar langsung siap dimasukkan ke Pivot Table
+- Bahwa anomali data tidak selalu berarti data rusak — bisa jadi mencerminkan kejadian bisnis nyata yang perlu diinvestigasi lebih lanjut
+- Perbedaan praktis antara membangun dashboard di Excel versus Tableau, baik dari sisi kemudahan maupun fleksibilitas visualisasi
+
+*Disclaimer: Project ini menggunakan dataset publik BikeStores yang dianalisis secara mandiri sebagai simulasi bisnis Data Analysis dan Business Intelligence.*

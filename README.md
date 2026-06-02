@@ -1,4 +1,4 @@
-# 🚲 Retail Business Performance & Sales Anomaly Analysis (BikeStores)
+# 🚲 Bike Retail Performance Dashboard & Strategic Sales Analysis
 
 <img src="Excel Dashboard Image.png" alt="BikeStores Excel Dashboard" width="900">
 
@@ -30,6 +30,17 @@ Project ini mensimulasikan peran Data Analyst di perusahaan ritel dengan tugas m
 
 > 🔑 **Insight utama:** Anomali April 2018 bukan pola musiman biasa. Penurunan sedrastis itu mengindikasikan salah satu dari tiga kemungkinan: kehabisan stok masif pasca lonjakan penjualan, kegagalan teknis sistem POS dalam merekam transaksi, atau pengurangan operasional cabang. Manajemen perlu audit internal sebelum bisa mengambil keputusan strategis.
 
+
+## 📊 Rekomendasi Strategis
+
+**Audit Operasional 2018:** Manajemen perlu segera menginvestigasi anomali Q3-Q4 2018. Apakah lonjakan April menguras seluruh stok gudang sehingga tidak ada barang yang bisa dijual di bulan berikutnya? Atau terdapat kegagalan sistem pencatatan transaksi? Jawaban atas pertanyaan ini menentukan langkah pemulihan yang tepat.
+
+**Knowledge Sharing antar Staf:** Marcelene Boyer dan Venita Daniel menghasilkan revenue hampir dua kali lipat dari staf lainnya. Taktik dan pendekatan penjualan mereka perlu didokumentasikan dan dijadikan SOP pelatihan standar untuk staf yang underperform seperti Kali Vargas.
+
+**Optimalisasi Inventaris Produk:** Kurangi porsi stok untuk kategori Cyclocross Bicycles yang penjualannya paling rendah, lalu alihkan anggaran pengadaan ke lini Mountain dan Road Bikes dari merek Trek yang terbukti menjadi penggerak utama revenue.
+
+**Diversifikasi Pasar Geografis:** Ketergantungan 68% revenue pada satu cabang (New York) adalah risiko bisnis yang signifikan. Diperlukan kampanye pemasaran yang lebih agresif di California dan Texas untuk menyeimbangkan kontribusi revenue antar wilayah.
+
 ## 🛠️ Tech Stack & Metodologi
 
 | Tahap | Tools | Yang Dilakukan |
@@ -58,16 +69,6 @@ Dataset hasil JOIN diolah menggunakan Pivot Table di Excel untuk menjawab ketiga
 
 - **Excel Dashboard:** Menggunakan Pivot Charts dan Slicers yang memungkinkan filter interaktif berdasarkan tahun, cabang, dan kategori produk.
 - **Tableau Dashboard:** Versi alternatif dengan visualisasi yang lebih fleksibel dan lebih mudah dibagikan secara online.
-
-## 📊 Rekomendasi Strategis
-
-**Audit Operasional 2018:** Manajemen perlu segera menginvestigasi anomali Q3-Q4 2018. Apakah lonjakan April menguras seluruh stok gudang sehingga tidak ada barang yang bisa dijual di bulan berikutnya? Atau terdapat kegagalan sistem pencatatan transaksi? Jawaban atas pertanyaan ini menentukan langkah pemulihan yang tepat.
-
-**Knowledge Sharing antar Staf:** Marcelene Boyer dan Venita Daniel menghasilkan revenue hampir dua kali lipat dari staf lainnya. Taktik dan pendekatan penjualan mereka perlu didokumentasikan dan dijadikan SOP pelatihan standar untuk staf yang underperform seperti Kali Vargas.
-
-**Optimalisasi Inventaris Produk:** Kurangi porsi stok untuk kategori Cyclocross Bicycles yang penjualannya paling rendah, lalu alihkan anggaran pengadaan ke lini Mountain dan Road Bikes dari merek Trek yang terbukti menjadi penggerak utama revenue.
-
-**Diversifikasi Pasar Geografis:** Ketergantungan 68% revenue pada satu cabang (New York) adalah risiko bisnis yang signifikan. Diperlukan kampanye pemasaran yang lebih agresif di California dan Texas untuk menyeimbangkan kontribusi revenue antar wilayah.
 
 ## 📁 Struktur Repositori
 

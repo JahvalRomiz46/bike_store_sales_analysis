@@ -2,7 +2,8 @@
 
 <img src="Excel Dashboard Image.png" alt="BikeStores Excel Dashboard" width="900">
 
-*Dashboard juga tersedia dalam versi Tableau — lihat file Tableau Dashboard.twb di repositori ini*
+*Dashboard bisa diakses di
+[Tableau Public](https://public.tableau.com/shared/4SQ6YMD4G?:display_count=n&:origin=viz_share_link)
 
 ## 📌 Business Context
 
